@@ -33,10 +33,6 @@
     <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
         <div class="container-fluid">
 
-            <?php if(App::environment(['local', 'development'])) : ?>
-            <responsive-indicator></responsive-indicator>
-            <?php endif; ?>
-
             {{--<a class="navbar-brand" href="{{ url('/') }}">
                 <img src="{{ asset('/img/roofmaxx_logo.png') }}" alt="Image" height="42"/></a>--}}
 
