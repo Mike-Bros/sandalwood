@@ -16,6 +16,14 @@ use Illuminate\Support\Facades\Route;
 
 Route::resource('/', 'HomeController');
 Route::resource('home', 'HomeController');
-
-Route::resource('history', 'HistoryController');
+Route::resource('batch', 'BatchController');
+Route::resource('', '');
+Route::resource('', '');
+Route::resource('', '');
+Route::resource('', '');
+Route::resource('', '');
+Route::resource('', '');
+Route::resource('', '');
+Route::resource('', '');
+Route::resource('', '');
 

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class HistoryController
+class BatchController
 {
     public function __construct()
     {
@@ -13,6 +13,6 @@ class HistoryController
 
     public function index(Request $request){
 
-        return view('history.index');
+        return view('batch.index');
     }
 }
