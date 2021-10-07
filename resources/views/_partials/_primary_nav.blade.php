@@ -1,6 +1,11 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <ul class="navbar-nav mr-auto p-2">
         <li class="nav-item">
+            <a style="margin-left: .5em; margin-right: .5em" href="/home">
+                <img src="{{asset('/img/candle.svg')}}" width="50" height="50" alt="">
+            </a>
+        </li>
+        <li class="nav-item">
             <a href="/home" class="nav-link"><i class="fas fa-home"></i> Home</a>
         </li>
         <li class="nav-item">
