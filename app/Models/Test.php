@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Test extends Model
 {
-
+    protected $table = 'test';
     protected $fillable=[
         'test_id',
         'test_conditions',

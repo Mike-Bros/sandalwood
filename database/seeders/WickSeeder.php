@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Wick;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
@@ -36,9 +37,17 @@ class WickSeeder extends Seeder
         $this->insert($wax_list);
     }
 
-    private function insert(Array $items){
-        foreach ($items as $item){
-            DB::table('wick')->insert([
+    private function insert(array $items)
+    {
+        foreach ($items as $item) {
+            Wick::updateOrCreate([
+                'name' => $item['name'],
+                'type' => $item['type'],
+                'thickness' => $item['thickness'],
+                'length' => $item['length'],
+                'price' => $item['price'],
+                'order_link' => $item['order_link']
+            ], [
                 'name' => $item['name'],
                 'type' => $item['type'],
                 'thickness' => $item['thickness'],

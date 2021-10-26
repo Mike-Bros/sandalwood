@@ -14,13 +14,15 @@ class CreateWickTable extends Migration
     public function up()
     {
         Schema::create('wick', function (Blueprint $table) {
-            $table->id('wick_id');
+            $table->id();
             $table->string('name');
             $table->string('type');
             $table->integer('thickness');
             $table->integer('length');
             $table->integer('price');
             $table->text('order_link');
+            $table->timestamp('updated_at')->nullable();
+            $table->timestamp('created_at')->nullable();
         });
     }
 

@@ -14,8 +14,11 @@ class CreateFragranceTable extends Migration
     public function up()
     {
         Schema::create('fragrance', function (Blueprint $table) {
-            $table->id('fragrance_id');
+            $table->id();
+            $table->string('name');
             $table->integer('combination_id');
+            $table->timestamp('updated_at')->nullable();
+            $table->timestamp('created_at')->nullable();
         });
     }
 

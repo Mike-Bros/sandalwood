@@ -14,13 +14,15 @@ class CreateCandleTable extends Migration
     public function up()
     {
         Schema::create('candle', function (Blueprint $table) {
-            $table->id('candle_id');
+            $table->id();
             $table->string('brand_name');
             $table->integer('wax_id');
             $table->integer('wax_amount');
             $table->integer('wick_id');
             $table->integer('fragrance_id');
             $table->integer('jar_id');
+            $table->timestamp('updated_at')->nullable();
+            $table->timestamp('created_at')->nullable();
         });
     }
 

@@ -14,12 +14,14 @@ class CreateScentTable extends Migration
     public function up()
     {
         Schema::create('scent', function (Blueprint $table) {
-            $table->id('scent_id');
+            $table->id();
             $table->string('name');
             $table->string('company');
             $table->integer('amount');
             $table->integer('price');
             $table->text('order_link');
+            $table->timestamp('updated_at')->nullable();
+            $table->timestamp('created_at')->nullable();
         });
     }
 

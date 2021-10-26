@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Wax extends Model
 {
-
+    protected $table = 'wax';
     protected $fillable=[
         'wax_id',
         'name',

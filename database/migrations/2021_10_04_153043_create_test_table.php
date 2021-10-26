@@ -14,11 +14,13 @@ class CreateTestTable extends Migration
     public function up()
     {
         Schema::create('test', function (Blueprint $table) {
-            $table->id('test_id');
+            $table->id();
             $table->longText('test_conditions')->nullable();
             $table->text('init_light_img')->nullable();
             $table->text('half_hour_progress_img')->nullable();
             $table->text('four_hour_progress_img')->nullable();
+            $table->timestamp('updated_at')->nullable();
+            $table->timestamp('created_at')->nullable();
         });
     }
 

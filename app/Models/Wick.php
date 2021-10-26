@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Wick extends Model
 {
-
+    protected $table = 'wick';
     protected $fillable=[
         'wick_id',
         'name',

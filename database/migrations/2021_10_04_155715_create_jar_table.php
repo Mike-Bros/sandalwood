@@ -14,12 +14,14 @@ class CreateJarTable extends Migration
     public function up()
     {
         Schema::create('jar', function (Blueprint $table) {
-            $table->id('jar_id');
+            $table->id();
             $table->string('name');
             $table->string('size');
             $table->integer('quantity');
             $table->integer('price');
             $table->text('order_link');
+            $table->timestamp('updated_at')->nullable();
+            $table->timestamp('created_at')->nullable();
         });
     }
 

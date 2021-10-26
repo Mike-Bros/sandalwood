@@ -14,11 +14,13 @@ class CreateProcessTable extends Migration
     public function up()
     {
         Schema::create('process', function (Blueprint $table) {
-            $table->id('process_id');
+            $table->id();
             $table->string('name');
             $table->longText('description')->nullable();
             $table->integer('max_temp');
             $table->integer('pour_temp');
+            $table->timestamp('updated_at')->nullable();
+            $table->timestamp('created_at')->nullable();
         });
     }
 

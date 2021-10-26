@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Process;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
@@ -20,15 +21,21 @@ class ProcessSeeder extends Seeder
                 'description' => "Melted wax to 170F and added scents. Let cool to 160F then poured into 3 candles. Stirred every 5-8 minutes until hardened.",
                 'max_temp' => 170,
                 'pour_temp' => 160,
-                ),
+            ),
         );
 
         $this->insert($wax_list);
     }
 
-    private function insert(Array $items){
-        foreach ($items as $item){
-            DB::table('process')->insert([
+    private function insert(array $items)
+    {
+        foreach ($items as $item) {
+            Process::updateOrCreate([
+                'name' => $item['name'],
+                'description' => $item['description'],
+                'max_temp' => $item['max_temp'],
+                'pour_temp' => $item['pour_temp']
+            ], [
                 'name' => $item['name'],
                 'description' => $item['description'],
                 'max_temp' => $item['max_temp'],

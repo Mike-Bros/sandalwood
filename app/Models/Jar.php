@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Jar extends Model
 {
-
+    protected $table = 'jar';
     protected $fillable=[
         'jar_id',
         'name',

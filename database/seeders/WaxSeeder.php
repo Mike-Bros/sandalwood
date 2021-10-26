@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Wax;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
@@ -34,9 +35,16 @@ class WaxSeeder extends Seeder
         $this->insert($wax_list);
     }
 
-    private function insert(Array $items){
-        foreach ($items as $item){
-            DB::table('wax')->insert([
+    private function insert(array $items)
+    {
+        foreach ($items as $item) {
+            Wax::updateOrCreate([
+                'name' => $item['name'],
+                'type' => $item['type'],
+                'weight' => $item['weight'],
+                'price' => $item['price'],
+                'order_link' => $item['order_link']
+            ], [
                 'name' => $item['name'],
                 'type' => $item['type'],
                 'weight' => $item['weight'],

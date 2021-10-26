@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Scent;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
@@ -14,7 +15,7 @@ class ScentSeeder extends Seeder
      */
     public function run()
     {
-        $wax_list = array(
+        $scent_list = array(
             array(
                 'name' => "Eucalyptus Essential Oil",
                 'company' => "Vitamin Shoppe",
@@ -136,12 +137,19 @@ class ScentSeeder extends Seeder
             )
         );
 
-        $this->insert($wax_list);
+        $this->insert($scent_list);
     }
 
-    private function insert(Array $items){
-        foreach ($items as $item){
-            DB::table('scent')->insert([
+    private function insert(array $items)
+    {
+        foreach ($items as $item) {
+            Scent::updateOrCreate([
+                'name' => $item['name'],
+                'company' => $item['company'],
+                'amount' => $item['amount'],
+                'price' => $item['price'],
+                'order_link' => $item['order_link']
+            ], [
                 'name' => $item['name'],
                 'company' => $item['company'],
                 'amount' => $item['amount'],

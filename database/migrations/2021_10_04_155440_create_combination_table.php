@@ -14,9 +14,17 @@ class CreateCombinationTable extends Migration
     public function up()
     {
         Schema::create('combination', function (Blueprint $table) {
-            $table->id('combination_id');
-            $table->json('scents');
-            $table->json('amounts');
+            $table->id();
+            $table->integer('scent_id_1')->references('id')->on('scent');
+            $table->decimal('amount_1', 8,2);
+            $table->integer('scent_id_2')->references('id')->on('scent')->nullable()->default(null);
+            $table->decimal('amount_2', 8,2)->nullable()->default(null);
+            $table->integer('scent_id_3')->references('id')->on('scent')->nullable()->default(null);
+            $table->decimal('amount_3', 8,2)->nullable()->default(null);
+            $table->integer('scent_id_4')->references('id')->on('scent')->nullable()->default(null);
+            $table->decimal('amount_4', 8,2)->nullable()->default(null);
+            $table->timestamp('updated_at')->nullable();
+            $table->timestamp('created_at')->nullable();
         });
     }
 
