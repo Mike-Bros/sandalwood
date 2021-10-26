@@ -17,6 +17,8 @@ class DatabaseSeeder extends Seeder
             WaxSeeder::class,
             WickSeeder::class,
             JarSeeder::class,
+            ProcessSeeder::class,
+            ScentSeeder::class,
         ]);
     }
 }

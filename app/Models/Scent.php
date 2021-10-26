@@ -11,7 +11,7 @@ class Scent extends Model
         'scent_id',
         'name',
         'company',
-        'amount_oz',
+        'amount', //in oz
         'price',
         'order_link',
     ];

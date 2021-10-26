@@ -17,9 +17,9 @@ class CreateScentTable extends Migration
             $table->id('scent_id');
             $table->string('name');
             $table->string('company');
-            $table->integer('amount_oz');
+            $table->integer('amount');
             $table->integer('price');
-            $table->string('order_link');
+            $table->text('order_link');
         });
     }
 
