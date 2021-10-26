@@ -8,7 +8,7 @@ class Jar extends Model
 {
     protected $table = 'jar';
     protected $fillable=[
-        'jar_id',
+        'id',
         'name',
         'size',
         'quantity',

@@ -8,7 +8,7 @@ class Candle extends Model
 {
     protected $table = 'candle';
     protected $fillable=[
-        'candle_id',
+        'id',
         'brand_name',
         'wax_id',
         'wax_amount',

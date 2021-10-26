@@ -8,7 +8,7 @@ class Wax extends Model
 {
     protected $table = 'wax';
     protected $fillable=[
-        'wax_id',
+        'id',
         'name',
         'type', //soy or bees
         'weight', //in lbs

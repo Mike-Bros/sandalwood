@@ -8,7 +8,7 @@ class Test extends Model
 {
     protected $table = 'test';
     protected $fillable=[
-        'test_id',
+        'id',
         'test_conditions',
         'init_light_img',
         'half_hour_progress_img',

@@ -8,7 +8,7 @@ class Wick extends Model
 {
     protected $table = 'wick';
     protected $fillable=[
-        'wick_id',
+        'id',
         'name',
         'type',
         'thickness',

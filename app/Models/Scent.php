@@ -8,7 +8,7 @@ class Scent extends Model
 {
     protected $table = 'scent';
     protected $fillable=[
-        'scent_id',
+        'id',
         'name',
         'company',
         'amount', //in oz

@@ -8,7 +8,7 @@ class Process extends Model
 {
     protected $table = 'process';
     protected $fillable=[
-        'process_id',
+        'id',
         'name',
         'description',
         'max_temp',

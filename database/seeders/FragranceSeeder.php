@@ -2,12 +2,12 @@
 
 namespace Database\Seeders;
 
-use App\Models\Combination;
+use App\Models\Fragrance;
 use App\Models\Scent;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class CombinationSeeder extends Seeder
+class FragranceSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -32,16 +32,16 @@ class CombinationSeeder extends Seeder
             // Eucalyptus & Lavender
             array(
                 'scent_id_1' => 1,
-                'amount_1' => 1,
+                'amount_1' => 1/3,
                 'scent_id_2' => 2,
-                'amount_2' => .4,
+                'amount_2' => .4/3,
             ),
             // Eucalyptus & Peppermint
             array(
                 'scent_id_1' => 1,
-                'amount_1' => .6,
+                'amount_1' => .6/3,
                 'scent_id_2' => 3,
-                'amount_2' => .5,
+                'amount_2' => .5/3,
             )
         );
         $this->insert($comb_list);
@@ -57,7 +57,7 @@ class CombinationSeeder extends Seeder
     private function insert(array $items)
     {
         foreach ($items as $item) {
-            Combination::updateOrCreate([
+            Fragrance::updateOrCreate([
                 'scent_id_1' => $item['scent_id_1'],
                 'amount_1' => $item['amount_1'],
                 'scent_id_2' => ($item['scent_id_2'] ?? null),
@@ -82,12 +82,12 @@ class CombinationSeeder extends Seeder
     private function createSingles()
     {
         foreach (Scent::all() as $item) {
-            Combination::updateOrCreate([
+            Fragrance::updateOrCreate([
                 'scent_id_1' => $item->id,
                 'scent_id_2' => null
             ], [
                 'scent_id_1' => $item->id,
-                'amount_1' => 1
+                'amount_1' => 1/3
             ]);
         }
     }
