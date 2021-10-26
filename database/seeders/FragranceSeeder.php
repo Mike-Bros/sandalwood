@@ -27,21 +27,21 @@ class FragranceSeeder extends Seeder
                 'scent_id_4' => ,
                 'amount_4' => ,
             ),*/
-
+        //scent amount is the calculated percentage to that #_candles * (wax_per_candle * amount) = scent_needed_oz
         $comb_list = array(
             // Eucalyptus & Lavender
             array(
                 'scent_id_1' => 1,
-                'amount_1' => 1/3,
+                'amount_1' => 1/3/5.1,
                 'scent_id_2' => 2,
-                'amount_2' => .4/3,
+                'amount_2' => .4/3/5.1,
             ),
             // Eucalyptus & Peppermint
             array(
                 'scent_id_1' => 1,
-                'amount_1' => .6/3,
+                'amount_1' => .6/3/5.1,
                 'scent_id_2' => 3,
-                'amount_2' => .5/3,
+                'amount_2' => .5/3/5.1,
             )
         );
         $this->insert($comb_list);
@@ -87,7 +87,7 @@ class FragranceSeeder extends Seeder
                 'scent_id_2' => null
             ], [
                 'scent_id_1' => $item->id,
-                'amount_1' => 1/3
+                'amount_1' => 1/3/5.1
             ]);
         }
     }
