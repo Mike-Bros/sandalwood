@@ -10,9 +10,9 @@ class Wax extends Model
     protected $fillable=[
         'wax_id',
         'name',
-        'type',
-        'weight',
-        'price',
+        'type', //soy or bees
+        'weight', //in lbs
+        'price', //stored as int divide by 100 for cents
         'order_link',
     ];
 

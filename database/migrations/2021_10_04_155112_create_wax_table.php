@@ -19,7 +19,7 @@ class CreateWaxTable extends Migration
             $table->string('type');
             $table->integer('weight');
             $table->integer('price');
-            $table->string('order_link');
+            $table->text('order_link');
         });
     }
 

@@ -19,7 +19,7 @@ class CreateWickTable extends Migration
             $table->string('type');
             $table->integer('length');
             $table->integer('price');
-            $table->string('order_link');
+            $table->text('order_link');
         });
     }
 

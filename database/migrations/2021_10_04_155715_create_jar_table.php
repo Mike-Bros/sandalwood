@@ -18,7 +18,7 @@ class CreateJarTable extends Migration
             $table->string('name');
             $table->integer('size');
             $table->integer('price');
-            $table->string('order_link');
+            $table->text('order_link');
         });
     }
 

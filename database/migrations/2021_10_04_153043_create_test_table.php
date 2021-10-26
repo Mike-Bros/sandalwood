@@ -16,9 +16,9 @@ class CreateTestTable extends Migration
         Schema::create('test', function (Blueprint $table) {
             $table->id('test_id');
             $table->longText('test_conditions')->nullable();
-            $table->string('init_light_img')->nullable();
-            $table->string('half_hour_progress_img')->nullable();
-            $table->string('four_hour_progress_img')->nullable();
+            $table->text('init_light_img')->nullable();
+            $table->text('half_hour_progress_img')->nullable();
+            $table->text('four_hour_progress_img')->nullable();
         });
     }
 
