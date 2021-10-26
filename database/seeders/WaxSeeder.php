@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class WaxSeeder extends Seeder
 {
@@ -30,19 +31,18 @@ class WaxSeeder extends Seeder
             )
         );
 
-        this.$this->insert($wax_list);
+        $this->insert($wax_list);
     }
 
     private function insert(Array $items){
         foreach ($items as $item){
-
+            DB::table('wax')->insert([
+                'name' => $item['name'],
+                'type' => $item['type'],
+                'weight' => $item['weight'],
+                'price' => $item['price'],
+                'order_link' => $item['order_link']
+            ]);
         }
-        DB::table('wax')->insert([
-            'name' => "American Soy Organics",
-            'type' => "soy",
-            'weight' => 25,
-            'price' => 7400,
-            'order_link' => "https://www.amazon.com/gp/product/B07WSFWW8N/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&th=1"
-        ]);
     }
 }

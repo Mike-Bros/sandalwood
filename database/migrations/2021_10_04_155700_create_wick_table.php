@@ -17,6 +17,7 @@ class CreateWickTable extends Migration
             $table->id('wick_id');
             $table->string('name');
             $table->string('type');
+            $table->integer('thickness');
             $table->integer('length');
             $table->integer('price');
             $table->text('order_link');

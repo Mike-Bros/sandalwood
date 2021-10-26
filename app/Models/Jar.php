@@ -11,6 +11,7 @@ class Jar extends Model
         'jar_id',
         'name',
         'size',
+        'quantity',
         'price',
         'order_link',
     ];

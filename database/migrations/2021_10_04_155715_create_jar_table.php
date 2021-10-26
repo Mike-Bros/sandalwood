@@ -16,7 +16,8 @@ class CreateJarTable extends Migration
         Schema::create('jar', function (Blueprint $table) {
             $table->id('jar_id');
             $table->string('name');
-            $table->integer('size');
+            $table->string('size');
+            $table->integer('quantity');
             $table->integer('price');
             $table->text('order_link');
         });

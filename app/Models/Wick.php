@@ -11,6 +11,7 @@ class Wick extends Model
         'wick_id',
         'name',
         'type',
+        'thickness',
         'length',
         'price',
         'order_link',
