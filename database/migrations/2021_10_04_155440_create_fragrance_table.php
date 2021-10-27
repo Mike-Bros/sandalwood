@@ -35,6 +35,6 @@ class CreateFragranceTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('combination');
+        Schema::dropIfExists('fragrance');
     }
 }
