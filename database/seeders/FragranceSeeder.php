@@ -59,21 +59,17 @@ class FragranceSeeder extends Seeder
         foreach ($items as $item) {
             Fragrance::updateOrCreate([
                 'scent_id_1' => $item['scent_id_1'],
-                'amount_1' => $item['amount_1'],
-                'scent_id_2' => ($item['scent_id_2'] ?? null),
-                'amount_2' => ($item['amount_2'] ?? null),
-                'scent_id_3' => ($item['scent_id_3'] ?? null),
-                'amount_3' => ($item['amount_3'] ?? null),
-                'scent_id_4' => ($item['scent_id_4'] ?? null),
-                'amount_4' => ($item['amount_4'] ?? null),
+                'scent_id_2' => (array_key_exists('scent_id_2', $item) ? $item['scent_id_2'] : null),
+                'scent_id_3' => (array_key_exists('scent_id_3', $item) ? $item['scent_id_3'] : null),
+                'scent_id_4' => (array_key_exists('scent_id_4', $item) ? $item['scent_id_4'] : null),
             ], [
                 'scent_id_1' => $item['scent_id_1'],
                 'amount_1' => $item['amount_1'],
-                'scent_id_2' => ($item['scent_id_2'] ?? null),
+                'scent_id_2' => (array_key_exists('scent_id_2', $item) ? $item['scent_id_2'] : null),
                 'amount_2' => ($item['amount_2'] ?? null),
-                'scent_id_3' => ($item['scent_id_3'] ?? null),
+                'scent_id_3' => (array_key_exists('scent_id_3', $item) ? $item['scent_id_3'] : null),
                 'amount_3' => ($item['amount_3'] ?? null),
-                'scent_id_4' => ($item['scent_id_4'] ?? null),
+                'scent_id_4' => (array_key_exists('scent_id_4', $item) ? $item['scent_id_4'] : null),
                 'amount_4' => ($item['amount_4'] ?? null),
             ]);
         }
