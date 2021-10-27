@@ -4,7 +4,6 @@ namespace Database\Seeders;
 
 use App\Models\Wick;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
 
 class WickSeeder extends Seeder
 {
@@ -15,7 +14,7 @@ class WickSeeder extends Seeder
      */
     public function run()
     {
-        $wax_list = array(
+        $wick_list = array(
             array(
                 'name' => "EricX Light Organic Hemp",
                 'type' => "Hemp & Beeswax",
@@ -34,7 +33,7 @@ class WickSeeder extends Seeder
             )
         );
 
-        $this->insert($wax_list);
+        $this->insert($wick_list);
     }
 
     private function insert(array $items)

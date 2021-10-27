@@ -9,7 +9,6 @@ use App\Models\Scent;
 use App\Models\Wax;
 use App\Models\Wick;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\Log;
 
 class CandleSeeder extends Seeder
 {
@@ -20,17 +19,17 @@ class CandleSeeder extends Seeder
      */
     public function run()
     {
-        /*$wax_list = array(
+        $candle_list = array(
             array(
-                'brand_name' => "",
-                'wax_id' => ,
-                'wax_amount' => ,
-                'jar_id' => ,
-                'wick_id' => ,
-                'fragrance_id' => ,
+                'brand_name' => "Steam Room",
+                'wax_id' => Wax::select('id')->where('name', 'American Soy Organics')->first()->id,
+                'wax_amount' => 5.1,
+                'jar_id' => Jar::select('id')->where('name', 'Syntic Yogurt Jars')->first()->id,
+                'wick_id' => Wick::select('id')->where('name', 'Twisted Bee Organic Hemp')->first()->id,
+                'fragrance_id' => 1,
             ),
         );
-        $this->insert($wax_list);*/
+        $this->insert($candle_list);
 
         $this->insertUsualDynamic();
     }

@@ -4,7 +4,6 @@ namespace Database\Seeders;
 
 use App\Models\Process;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
 
 class ProcessSeeder extends Seeder
 {
@@ -15,7 +14,7 @@ class ProcessSeeder extends Seeder
      */
     public function run()
     {
-        $wax_list = array(
+        $process_list = array(
             array(
                 'name' => "Standard Process 2021",
                 'description' => "Melted wax to 170F and added scents. Let cool to 160F then poured into 3 candles. Stirred every 5-8 minutes until hardened.",
@@ -24,7 +23,7 @@ class ProcessSeeder extends Seeder
             ),
         );
 
-        $this->insert($wax_list);
+        $this->insert($process_list);
     }
 
     private function insert(array $items)

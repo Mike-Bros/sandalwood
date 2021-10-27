@@ -5,7 +5,6 @@ namespace Database\Seeders;
 use App\Models\Fragrance;
 use App\Models\Scent;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
 
 class FragranceSeeder extends Seeder
 {
@@ -28,7 +27,7 @@ class FragranceSeeder extends Seeder
                 'amount_4' => ,
             ),*/
         //scent amount is the calculated percentage to that #_candles * (wax_per_candle * amount) = scent_needed_oz
-        $comb_list = array(
+        $frag_list = array(
             // Eucalyptus & Lavender
             array(
                 'scent_id_1' => 1,
@@ -44,14 +43,8 @@ class FragranceSeeder extends Seeder
                 'amount_2' => .5/3/5.1,
             )
         );
-        $this->insert($comb_list);
+        $this->insert($frag_list);
         $this->createSingles();
-//        foreach (Scent::all()->where('company','Candle Science') as $scent){
-//            $combination = new Combination();
-//            $combination->scent_id_1 = $scent->scent_id;
-//            $combination->amount_1 = 1;
-//            $combination->save();
-//        }
     }
 
     private function insert(array $items)

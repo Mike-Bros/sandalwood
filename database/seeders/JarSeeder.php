@@ -4,7 +4,6 @@ namespace Database\Seeders;
 
 use App\Models\Jar;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
 
 class JarSeeder extends Seeder
 {
@@ -15,7 +14,7 @@ class JarSeeder extends Seeder
      */
     public function run()
     {
-        $wax_list = array(
+        $jar_list = array(
             array(
                 'name' => "Folinstall Yogurt Jars",
                 'size' => "7oz",
@@ -39,7 +38,7 @@ class JarSeeder extends Seeder
             ),
         );
 
-        $this->insert($wax_list);
+        $this->insert($jar_list);
     }
 
     private function insert(array $items)

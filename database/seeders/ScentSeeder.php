@@ -4,7 +4,6 @@ namespace Database\Seeders;
 
 use App\Models\Scent;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
 
 class ScentSeeder extends Seeder
 {
