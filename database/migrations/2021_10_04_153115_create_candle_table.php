@@ -16,11 +16,11 @@ class CreateCandleTable extends Migration
         Schema::create('candle', function (Blueprint $table) {
             $table->id();
             $table->string('brand_name');
-            $table->integer('wax_id');
-            $table->integer('wax_amount');
-            $table->integer('wick_id');
-            $table->integer('fragrance_id');
-            $table->integer('jar_id');
+            $table->integer('wax_id')->references('id')->on('wax');
+            $table->decimal('wax_amount',8,4);
+            $table->integer('jar_id')->references('id')->on('jar');
+            $table->integer('wick_id')->references('id')->on('wick');
+            $table->integer('fragrance_id')->references('id')->on('fragrance');
             $table->timestamp('updated_at')->nullable();
             $table->timestamp('created_at')->nullable();
         });

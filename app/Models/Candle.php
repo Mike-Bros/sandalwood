@@ -11,10 +11,10 @@ class Candle extends Model
         'id',
         'brand_name',
         'wax_id',
+        'jar_id',
         'wax_amount',
         'wick_id',
         'fragrance_id',
-        'jar_id',
     ];
 
 }

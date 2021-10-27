@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
             ProcessSeeder::class,
             ScentSeeder::class,
             FragranceSeeder::class,
+            CandleSeeder::class,
         ]);
     }
 }
