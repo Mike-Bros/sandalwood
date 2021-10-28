@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="container">
+    <div class="container" style="margin-bottom: 4em">
         <div class="row justify-content-center">
             <h1><i class="fas fa-glass-whiskey"></i> Jar ({{count($jars)}})</h1>
         </div>
@@ -34,7 +34,6 @@
         @else
             <p>There are no jars...</p>
         @endif
-    </div>
     </div>
 
 @endsection

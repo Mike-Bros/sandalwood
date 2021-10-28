@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="container">
+    <div class="container" style="margin-bottom: 4em">
         <div class="row justify-content-center">
             <h1><i class="fas fa-broom fa-rotate-180"></i> Wick ({{count($wicks)}})</h1>
         </div>
