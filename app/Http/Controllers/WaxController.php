@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Wax;
 use Illuminate\Http\Request;
 
 class WaxController
@@ -12,7 +13,7 @@ class WaxController
     }
 
     public function index(Request $request){
-
-        return view('wax.index');
+        $waxes = Wax::all();
+        return view('wax.index', compact('waxes'));
     }
 }
