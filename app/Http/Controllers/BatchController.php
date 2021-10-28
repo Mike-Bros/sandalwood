@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Batch;
 use Illuminate\Http\Request;
 
 class BatchController
@@ -12,7 +13,7 @@ class BatchController
     }
 
     public function index(Request $request){
-
-        return view('batch.index');
+        $batches = Batch::all();
+        return view('batch.index', compact('batches'));
     }
 }

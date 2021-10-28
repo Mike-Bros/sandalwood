@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Candle;
 use Illuminate\Http\Request;
 
 class CandleController
@@ -12,7 +13,7 @@ class CandleController
     }
 
     public function index(Request $request){
-
-        return view('candle.index');
+        $candles = Candle::all();
+        return view('candle.index', compact('candles'));
     }
 }

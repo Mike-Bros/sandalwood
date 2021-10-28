@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Test;
 use Illuminate\Http\Request;
 
 class TestController
@@ -12,7 +13,7 @@ class TestController
     }
 
     public function index(Request $request){
-
-        return view('test.index');
+        $tests = Test::all();
+        return view('test.index', compact('tests'));
     }
 }

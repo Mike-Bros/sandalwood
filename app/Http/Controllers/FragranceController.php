@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Fragrance;
 use Illuminate\Http\Request;
 
 class FragranceController
@@ -12,7 +13,7 @@ class FragranceController
     }
 
     public function index(Request $request){
-
-        return view('fragrance.index');
+        $fragrances = Fragrance::all();
+        return view('fragrance.index', compact('fragrances'));
     }
 }

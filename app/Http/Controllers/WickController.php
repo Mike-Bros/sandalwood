@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Wick;
 use Illuminate\Http\Request;
 
 class WickController
@@ -12,7 +13,7 @@ class WickController
     }
 
     public function index(Request $request){
-
-        return view('wick.index');
+        $wicks = Wick::all();
+        return view('wick.index', compact('wicks'));
     }
 }
