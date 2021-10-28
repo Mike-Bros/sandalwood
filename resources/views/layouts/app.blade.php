@@ -57,8 +57,6 @@
         </div>
     </footer>
 </div>
-
-</div>
 @yield('scripts-bottom')
 </body>
 </html>
