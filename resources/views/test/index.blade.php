@@ -4,7 +4,7 @@
 
     <div class="container">
         <div class="row justify-content-center">
-            <h1>Test</h1>
+            <h1><i class="fas fa-tasks"></i> Test</h1>
         </div>
 
     </div>

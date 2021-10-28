@@ -34,7 +34,7 @@
                 </tbody>
             </table>
         @else
-            <p>There are no dealers.</p>
+            <p>There is no wax...</p>
         @endif
     </div>
 

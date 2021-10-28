@@ -4,8 +4,9 @@
 
     <div class="container">
         <div class="row justify-content-center">
-            <h1>Batch</h1>
+            <h1><i class="fas fa-vials"></i> Batch</h1>
         </div>
+        <br>
 
     </div>
 
