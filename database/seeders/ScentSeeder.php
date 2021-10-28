@@ -141,19 +141,19 @@ class ScentSeeder extends Seeder
 
     private function insert(array $items)
     {
-        foreach ($items as $item) {
+        foreach ($items as $scent) {
             Scent::updateOrCreate([
-                'name' => $item['name'],
-                'company' => $item['company'],
-                'amount' => $item['amount'],
-                'price' => $item['price'],
-                'order_link' => $item['order_link']
+                'name' => $scent['name'],
+                'company' => $scent['company'],
+                'amount' => $scent['amount'],
+                'price' => $scent['price'],
+                'order_link' => $scent['order_link']
             ], [
-                'name' => $item['name'],
-                'company' => $item['company'],
-                'amount' => $item['amount'],
-                'price' => $item['price'],
-                'order_link' => $item['order_link']
+                'name' => $scent['name'],
+                'company' => $scent['company'],
+                'amount' => $scent['amount'],
+                'price' => $scent['price'],
+                'order_link' => $scent['order_link']
             ]);
         }
     }

@@ -36,19 +36,19 @@ class WaxSeeder extends Seeder
 
     private function insert(array $items)
     {
-        foreach ($items as $item) {
+        foreach ($items as $wax) {
             Wax::updateOrCreate([
-                'name' => $item['name'],
-                'type' => $item['type'],
-                'weight' => $item['weight'],
-                'price' => $item['price'],
-                'order_link' => $item['order_link']
+                'name' => $wax['name'],
+                'type' => $wax['type'],
+                'weight' => $wax['weight'],
+                'price' => $wax['price'],
+                'order_link' => $wax['order_link']
             ], [
-                'name' => $item['name'],
-                'type' => $item['type'],
-                'weight' => $item['weight'],
-                'price' => $item['price'],
-                'order_link' => $item['order_link']
+                'name' => $wax['name'],
+                'type' => $wax['type'],
+                'weight' => $wax['weight'],
+                'price' => $wax['price'],
+                'order_link' => $wax['order_link']
             ]);
         }
     }

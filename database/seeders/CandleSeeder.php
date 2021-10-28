@@ -36,21 +36,21 @@ class CandleSeeder extends Seeder
 
     private function insert(array $items)
     {
-        foreach ($items as $item) {
+        foreach ($items as $candle) {
             Candle::updateOrCreate([
-                'brand_name' => $item['brand_name'],
-                'wax_id' => $item['wax_id'],
-                'wax_amount' => $item['wax_amount'],
-                'jar_id' => $item['jar_id'],
-                'wick_id' => $item['wick_id'],
-                'fragrance_id' => $item['fragrance_id'],
+                'brand_name' => $candle['brand_name'],
+                'wax_id' => $candle['wax_id'],
+                'wax_amount' => $candle['wax_amount'],
+                'jar_id' => $candle['jar_id'],
+                'wick_id' => $candle['wick_id'],
+                'fragrance_id' => $candle['fragrance_id'],
             ], [
-                'brand_name' => $item['brand_name'],
-                'wax_id' => $item['wax_id'],
-                'wax_amount' => $item['wax_amount'],
-                'jar_id' => $item['jar_id'],
-                'wick_id' => $item['wick_id'],
-                'fragrance_id' => $item['fragrance_id'],
+                'brand_name' => $candle['brand_name'],
+                'wax_id' => $candle['wax_id'],
+                'wax_amount' => $candle['wax_amount'],
+                'jar_id' => $candle['jar_id'],
+                'wick_id' => $candle['wick_id'],
+                'fragrance_id' => $candle['fragrance_id'],
             ]);
         }
     }

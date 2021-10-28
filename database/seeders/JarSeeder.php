@@ -43,19 +43,19 @@ class JarSeeder extends Seeder
 
     private function insert(array $items)
     {
-        foreach ($items as $item) {
+        foreach ($items as $jar) {
             Jar::updateOrCreate([
-                'name' => $item['name'],
-                'size' => $item['size'],
-                'quantity' => $item['quantity'],
-                'price' => $item['price'],
-                'order_link' => $item['order_link']
+                'name' => $jar['name'],
+                'size' => $jar['size'],
+                'quantity' => $jar['quantity'],
+                'price' => $jar['price'],
+                'order_link' => $jar['order_link']
             ], [
-                'name' => $item['name'],
-                'size' => $item['size'],
-                'quantity' => $item['quantity'],
-                'price' => $item['price'],
-                'order_link' => $item['order_link']
+                'name' => $jar['name'],
+                'size' => $jar['size'],
+                'quantity' => $jar['quantity'],
+                'price' => $jar['price'],
+                'order_link' => $jar['order_link']
             ]);
         }
     }

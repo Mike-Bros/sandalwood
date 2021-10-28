@@ -28,17 +28,17 @@ class ProcessSeeder extends Seeder
 
     private function insert(array $items)
     {
-        foreach ($items as $item) {
+        foreach ($items as $process) {
             Process::updateOrCreate([
-                'name' => $item['name'],
-                'description' => $item['description'],
-                'max_temp' => $item['max_temp'],
-                'pour_temp' => $item['pour_temp']
+                'name' => $process['name'],
+                'description' => $process['description'],
+                'max_temp' => $process['max_temp'],
+                'pour_temp' => $process['pour_temp']
             ], [
-                'name' => $item['name'],
-                'description' => $item['description'],
-                'max_temp' => $item['max_temp'],
-                'pour_temp' => $item['pour_temp']
+                'name' => $process['name'],
+                'description' => $process['description'],
+                'max_temp' => $process['max_temp'],
+                'pour_temp' => $process['pour_temp']
             ]);
         }
     }

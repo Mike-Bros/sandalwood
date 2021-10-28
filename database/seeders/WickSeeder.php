@@ -38,21 +38,21 @@ class WickSeeder extends Seeder
 
     private function insert(array $items)
     {
-        foreach ($items as $item) {
+        foreach ($items as $wick) {
             Wick::updateOrCreate([
-                'name' => $item['name'],
-                'type' => $item['type'],
-                'thickness' => $item['thickness'],
-                'length' => $item['length'],
-                'price' => $item['price'],
-                'order_link' => $item['order_link']
+                'name' => $wick['name'],
+                'type' => $wick['type'],
+                'thickness' => $wick['thickness'],
+                'length' => $wick['length'],
+                'price' => $wick['price'],
+                'order_link' => $wick['order_link']
             ], [
-                'name' => $item['name'],
-                'type' => $item['type'],
-                'thickness' => $item['thickness'],
-                'length' => $item['length'],
-                'price' => $item['price'],
-                'order_link' => $item['order_link']
+                'name' => $wick['name'],
+                'type' => $wick['type'],
+                'thickness' => $wick['thickness'],
+                'length' => $wick['length'],
+                'price' => $wick['price'],
+                'order_link' => $wick['order_link']
             ]);
         }
     }
