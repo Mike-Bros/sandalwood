@@ -16,10 +16,10 @@ class CreateBatchTable extends Migration
         Schema::create('batch', function (Blueprint $table) {
             $table->id();
             $table->integer('candles_made');
-            $table->integer('test_id')->nullable();
-            $table->integer('process_id')->nullable();
-            $table->integer('candle_id');
-            $table->string('batch_img')->nullable();
+            $table->integer('test_id')->references('id')->on('wick')->nullable();
+            $table->integer('process_id')->references('id')->on('wick')->nullable();
+            $table->integer('candle_id')->references('id')->on('candle');
+            $table->text('batch_img')->nullable();
             $table->longText('notes')->nullable();
             $table->timestamp('updated_at')->nullable();
             $table->timestamp('created_at')->nullable();
