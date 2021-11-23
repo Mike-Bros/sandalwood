@@ -55,7 +55,7 @@
                 </tbody>
             </table>
         @else
-            <p>There is no wax...</p>
+            <p>There are no fragrances...</p>
         @endif
     </div>
 

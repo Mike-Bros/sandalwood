@@ -32,7 +32,7 @@
                 </tbody>
             </table>
         @else
-            <p>There is no wax...</p>
+            <p>There are no scents...</p>
         @endif
     </div>
 
