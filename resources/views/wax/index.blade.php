@@ -8,7 +8,7 @@
         </div>
         <br>
 
-        @if(!empty($waxes))
+        @if(count($waxes)!=0)
             <table class="table table-bordered table-hover">
                 <thead>
                 <tr>

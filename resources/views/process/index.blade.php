@@ -8,7 +8,7 @@
         </div>
         <br>
 
-        @if(!empty($processes))
+        @if(count($processes)!=0)
             <table class="table table-bordered table-hover">
                 <thead>
                 <tr>

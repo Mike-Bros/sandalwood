@@ -8,7 +8,7 @@
         </div>
         <br>
 
-        @if(!empty($fragrances))
+        @if(count($fragrances)!=0)
             <table class="table table-bordered table-hover">
                 <thead>
                 <tr>

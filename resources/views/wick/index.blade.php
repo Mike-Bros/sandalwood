@@ -8,7 +8,7 @@
         </div>
         <br>
 
-        @if(!empty($wicks))
+        @if(count($wicks)!=0)
             <table class="table table-bordered table-hover">
                 <thead>
                 <tr>

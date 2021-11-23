@@ -8,7 +8,7 @@
         </div>
         <br>
 
-        @if(!empty($jars))
+        @if(count($jars)!=0)
             <table class="table table-bordered table-hover">
                 <thead>
                 <tr>
