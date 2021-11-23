@@ -18,6 +18,9 @@
             <a href="/fragrance" class="nav-link"><i class="fas fa-tint"></i> Fragrance</a>
         </li>
         <li class="nav-item">
+            <a href="/scent" class="nav-link"><i class="fas fa-tint"></i> Scent</a>
+        </li>
+        <li class="nav-item">
             <a href="/process" class="nav-link"><i class="fas fa-magic"></i> Process</a>
         </li>
         <li class="nav-item">

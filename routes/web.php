@@ -19,6 +19,7 @@ Route::resource('home', 'HomeController');
 Route::resource('batch', 'BatchController');
 Route::resource('candle', 'CandleController');
 Route::resource('fragrance', 'FragranceController');
+Route::resource('scent', 'ScentController');
 Route::resource('process', 'ProcessController');
 Route::resource('test', 'TestController');
 Route::resource('jar', 'JarController');
