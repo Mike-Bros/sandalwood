@@ -2,7 +2,7 @@
     <ul class="navbar-nav mr-auto p-2">
         <li class="nav-item">
             <a style="margin-left: .5em; margin-right: .5em" href="/home">
-                <img src="{{asset('/img/candle.svg')}}" width="50" height="50" alt="">
+                <img src="{{asset('/img/icons/candle.svg')}}" width="50" height="50" alt="">
             </a>
         </li>
         <li class="nav-item">
