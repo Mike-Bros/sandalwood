@@ -9,9 +9,11 @@
 docker-compose.override.yml
 Homestead.json
 Homestead.yaml
+Vagrantfile
 npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
 /temp
 /temp/
+/.vagrant/

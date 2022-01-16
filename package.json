@@ -23,6 +23,9 @@
         "sass-loader": "^12.1.0"
     },
     "dependencies": {
-        "bootstrap-dark-5": "^1.1.1"
+        "bootstrap-dark-5": "^1.1.1",
+        "datatables.net": "^1.11.3",
+        "datatables.net-bs4": "^1.11.3",
+        "datatables.net-dt": "^1.11.3"
     }
 }
