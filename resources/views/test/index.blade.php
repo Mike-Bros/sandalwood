@@ -22,7 +22,7 @@
                 <tbody>
                 @foreach($tests as $test)
                     <tr>
-                        <td>{{$test->id}}</td>
+                        <td><a href="/test/{{$test->id}}" target="_blank">{{$test->id}}</a></td>
                         <td>{{$test->conditions}}</td>
                         <td>{{$test->init_light_img}}</td>
                         <td>{{$test->half_hour_progress_img}} lbs</td>

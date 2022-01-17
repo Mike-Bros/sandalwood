@@ -16,4 +16,8 @@ class JarController
         $jars = Jar::all();
         return view('jar.index', compact('jars'));
     }
+
+    public function show(Jar $jar) {
+        return view('jar.show', compact('jar'));
+    }
 }

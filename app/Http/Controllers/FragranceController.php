@@ -16,4 +16,8 @@ class FragranceController
         $fragrances = Fragrance::all();
         return view('fragrance.index', compact('fragrances'));
     }
+
+    public function show(Fragrance $fragrance) {
+        return view('fragrance.show', compact('fragrance'));
+    }
 }

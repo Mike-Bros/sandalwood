@@ -22,10 +22,10 @@
                 <tbody>
                 @foreach($jars as $jar)
                     <tr>
-                        <td>{{$jar->id}}</td>
+                        <td><a href="/jar/{{$jar->id}}" target="_blank">{{$jar->id}}</a></td>
                         <td><a href="{{$jar->order_link}}" target="_blank">{{$jar->name}}</a></td>
                         <td>{{$jar->size}} oz</td>
-                        <td>{{$jar->quanity}}</td>
+                        <td>{{$jar->quantity}}</td>
                         <td>${{number_format($jar->price/100, 2)}}</td>
                     </tr>
                 @endforeach

@@ -26,25 +26,25 @@
                 <tbody>
                 @foreach($fragrances as $fragrance)
                     <tr>
-                        <td>{{$fragrance->id}}</td>
-                        <td>{{\App\Models\Scent::select('name')->where('id',$fragrance->scent_id_1)->get()->first()->name}}</td>
+                        <td><a href="/fragrance/{{$fragrance->id}}">{{$fragrance->id}}</a></td>
+                        <td><a href="/scent/{{$fragrance->scent_id_1}}" target="_blank">{{\App\Models\Scent::select('name')->where('id',$fragrance->scent_id_1)->get()->first()->name}}</a></td>
                         <td>{{number_format($fragrance->amount_1 * 100, 2)}}%</td>
                         @if (isset($fragrance->scent_id_2))
-                            <td>{{App\Models\Scent::select('name')->where('id',$fragrance->scent_id_2)->get()->first()->name}}</td>
+                            <td><a href="/scent/{{$fragrance->scent_id_2}}" target="_blank">{{App\Models\Scent::select('name')->where('id',$fragrance->scent_id_2)->get()->first()->name}}</a></td>
                             <td>{{number_format($fragrance->amount_2 * 100, 2)}}%</td>
                         @else
                             <td>NA</td>
                             <td>NA</td>
                         @endif
                         @if (isset($fragrance->scent_id_3))
-                            <td>{{App\Models\Scent::select('name')->where('id',$fragrance->scent_id_3)->get()->first()->name}}</td>
+                            <td><a href="/scent/{{$fragrance->scent_id_3}}" target="_blank">{{App\Models\Scent::select('name')->where('id',$fragrance->scent_id_3)->get()->first()->name}}</a></td>
                             <td>{{number_format($fragrance->amount_3 * 100, 2)}}%</td>
                         @else
                             <td>NA</td>
                             <td>NA</td>
                         @endif
                         @if (isset($fragrance->scent_id_4))
-                            <td>{{App\Models\Scent::select('name')->where('id',$fragrance->scent_id_4)->get()->first()->name}}</td>
+                            <td><a href="/scent/{{$fragrance->scent_id_4}}" target="_blank">{{App\Models\Scent::select('name')->where('id',$fragrance->scent_id_4)->get()->first()->name}}</a></td>
                             <td>{{number_format($fragrance->amount_4 * 100, 2)}}%</td>
                         @else
                             <td>NA</td>

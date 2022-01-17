@@ -21,10 +21,10 @@
                 <tbody>
                 @foreach($candles as $candle)
                     <tr>
-                        <td>{{$candle->id}}</td>
+                        <td><a href="/candle/{{$candle->id}}" target="_blank">{{$candle->id}}</a></td>
                         <td>{{$candle->brand_name}}</td>
-                        <td>{{\App\Models\Wax::select('name')->where('id', $candle->wax_id)->get()->first()->name . ' - ' . number_format($candle->wax_amount,1)}}oz</td>
-                        <td>{{$jar = \App\Models\Jar::select('name')->where('id', $candle->jar_id)->get()->first()->name}} -
+                        <td><a href="/wax/{{$candle->wax_id}}" target="_blank">{{\App\Models\Wax::select('name')->where('id', $candle->wax_id)->get()->first()->name . ' - ' . number_format($candle->wax_amount,1)}}oz</a></td>
+                        <td><a href="/jar/{{$candle->jar_id}}" target="_blank">{{$jar = \App\Models\Jar::select('name')->where('id', $candle->jar_id)->get()->first()->name}} -
                             {{$jar = \App\Models\Jar::select('size')->where('id', $candle->jar_id)->get()->first()->size}}</td>
                     </tr>
                 @endforeach

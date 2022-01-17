@@ -22,7 +22,7 @@
                 <tbody>
                 @foreach($scents as $scent)
                     <tr>
-                        <td>{{$scent->id}}</td>
+                        <td><a href="/scent/{{$scent->id}}" target="_blank">{{$scent->id}}</a></td>
                         <td><a href="{{$scent->order_link}}" target="_blank">{{$scent->name}}</a></td>
                         <td>{{$scent->company}}</td>
                         <td>{{$scent->amount}} oz</td>

@@ -16,4 +16,8 @@ class WickController
         $wicks = Wick::all();
         return view('wick.index', compact('wicks'));
     }
+
+    public function show(Wick $wick) {
+        return view('wick.show', compact('wick'));
+    }
 }

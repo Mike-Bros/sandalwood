@@ -23,7 +23,7 @@
                 <tbody>
                 @foreach($waxes as $wax)
                     <tr>
-                        <td>{{$wax->id}}</td>
+                        <td><a href="/wax/{{$wax->id}}" target="_blank">{{$wax->id}}</a></td>
                         <td><a href="{{$wax->order_link}}" target="_blank">{{$wax->name}}</a></td>
                         <td>{{$wax->type}}</td>
                         <td>{{$wax->weight}} lbs</td>

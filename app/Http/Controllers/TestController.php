@@ -16,4 +16,8 @@ class TestController
         $tests = Test::all();
         return view('test.index', compact('tests'));
     }
+
+    public function show(Test $test) {
+        return view('test.show', compact('test'));
+    }
 }

@@ -16,4 +16,8 @@ class ProcessController
         $processes = Process::all();
         return view('process.index', compact('processes'));
     }
+
+    public function show(Process $process) {
+        return view('process.show', compact('process'));
+    }
 }

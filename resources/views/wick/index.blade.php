@@ -23,7 +23,7 @@
                 <tbody>
                 @foreach($wicks as $wick)
                     <tr>
-                        <td>{{$wick->id}}</td>
+                        <td><a href="/wick/{{$wick->id}}" target="_blank">{{$wick->id}}</a></td>
                         <td><a href="{{$wick->order_link}}" target="_blank">{{$wick->name}}</a></td>
                         <td>{{$wick->type}}</td>
                         <td>{{$wick->thickness}} mm</td>

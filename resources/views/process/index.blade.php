@@ -22,7 +22,7 @@
                 <tbody>
                 @foreach($processes as $process)
                     <tr>
-                        <td>{{$process->id}}</td>
+                        <td><a href="/process/{{$process->id}}" target="_blank">{{$process->id}}</a></td>
                         <td>{{$process->name}}</td>
                         <td>{{$process->description}}</td>
                         <td>{{$process->max_temp}} F</td>

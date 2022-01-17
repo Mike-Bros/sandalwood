@@ -16,4 +16,8 @@ class WaxController
         $waxes = Wax::all();
         return view('wax.index', compact('waxes'));
     }
+
+    public function show(Wax $wax) {
+        return view('wax.show', compact('wax'));
+    }
 }

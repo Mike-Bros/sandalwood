@@ -27,12 +27,12 @@
                         <td>{{$batch->candle_id}}</td>
                         <td>{{$batch->candles_made}}</td>
                         @if (isset($batch->process_id))
-                            <td>{{\App\Models\Process::select('name')->where('id', $batch->process_id)->get()->first()->name}}</td>
+                            <td><a href="/process/{{$batch->process_id}}">{{\App\Models\Process::select('name')->where('id', $batch->process_id)->get()->first()->name}}</a></td>
                         @else
                             <td>NA</td>
                         @endif
                         @if (isset($batch->test_id))
-                            <td>{{$batch->test_id}}</td>
+                            <td><a href="/test/{{$batch->test_id}}">{{$batch->test_id}}</td>
                         @else
                             <td>NA</td>
                         @endif

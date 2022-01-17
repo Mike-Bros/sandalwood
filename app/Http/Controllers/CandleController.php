@@ -16,4 +16,8 @@ class CandleController
         $candles = Candle::all();
         return view('candle.index', compact('candles'));
     }
+
+    public function show(Candle $candle) {
+        return view('candle.show', compact('candle'));
+    }
 }
