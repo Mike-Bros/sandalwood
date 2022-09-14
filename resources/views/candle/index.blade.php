@@ -4,8 +4,11 @@
 
     <div class="container" style="margin-bottom: 4em">
         <div class="row justify-content-center">
-            <h1><i class="fas fa-vial"></i> Candle ({{count($candles)}})</h1>
-        </div>
+            <h1>
+                <i class="fas fa-vial"></i> Candle ({{count($candles)}})
+                <a type="button" class="btn btn-sm btn-primary"
+                href="/candle/create"><i class="fas fa-plus"></i></a>
+            </h1>
         <br>
 
         @if(count($candles)!=0)

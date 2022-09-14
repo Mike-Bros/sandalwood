@@ -22,6 +22,8 @@ Route::get('batch/{id}', 'BatchController@show');
 
 Route::resource('candle', 'CandleController');
 Route::get('candle/{id}', 'CandleController@show');
+Route::get('candle/create', 'CandleController@showCreate');
+Route::post('candle/create', 'CandleController@create');
 
 Route::resource('fragrance', 'FragranceController');
 Route::get('fragrance/{id}', 'FragranceController@show');
